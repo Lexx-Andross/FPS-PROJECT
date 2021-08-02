@@ -104,10 +104,10 @@ func process_movement(delta):
 	if dir.dot(hvel) > 0:
 		if is_sprinting:
 			accel = SPRINT_ACCEL
-	else:
-		accel = ACCEL
 		else:
-			ccel = DEACCEL
+			accel = ACCEL
+	else:
+		accel = DEACCEL
 
 	hvel = hvel.linear_interpolate(target, accel * delta)
 	vel.x = hvel.x
